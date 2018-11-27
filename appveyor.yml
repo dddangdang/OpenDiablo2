@@ -6,9 +6,6 @@ before_build:
 - cmd: nuget restore OpenDiablo2.sln
 build:
   verbosity: minimal
-before_build:
-- cmd: >-
-    nuget restore
 after_build:
 - cmd: >-
     cd OpenDiablo2\bin\x64\Release\*
