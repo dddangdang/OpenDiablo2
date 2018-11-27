@@ -19,15 +19,7 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
-  inputs:
-    SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**\bin\$(BuildConfiguration)\**'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-    flattenFolders: true
-
 - task: PublishPipelineArtifact@0
   inputs:
-    artifactName: 'windows'
-    targetPath: '**\bin\$(buildPlatform)\$(buildConfiguration)\'
+    artifactName: 'win64'
+    targetPath: 'bin/$(buildPlatform)/$(buildConfiguration)'
