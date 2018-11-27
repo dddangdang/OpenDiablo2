@@ -27,7 +27,8 @@ steps:
     TargetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: true
 
-- task: PublishBuildArtifacts@1
+steps:
+- task: PublishPipelineArtifact@0
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'drop' 
+    artifactName: 'windows'
+    targetPath: '**\bin\$(buildPlatform)\$(buildConfiguration)\'
