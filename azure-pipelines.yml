@@ -27,8 +27,7 @@ steps:
     TargetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: true
 
-steps:
-- task: PublishPipelineArtifact@0
+ - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'windows'
     targetPath: '**\bin\$(buildPlatform)\$(buildConfiguration)\'
