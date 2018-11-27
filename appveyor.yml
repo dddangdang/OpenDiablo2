@@ -12,6 +12,7 @@ after_build:
     7z a OpenDiablo2-Win64-Dev.zip *
 artifacts:
 - path: OpenDiablo2\bin\x64\Release\OpenDiablo2-Win64-Dev.zip
+
   name: Win64
 deploy:
 - provider: GitHub
