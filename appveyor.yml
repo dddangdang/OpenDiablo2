@@ -24,3 +24,4 @@ deploy:
   artifact: Win64
   prerelease: true
   force_update: true
+  
